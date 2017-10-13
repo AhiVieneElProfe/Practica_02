@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
+
+int main(){
+	
+	srand(time(NULL));
+	int  carta1[51], carta2[51], total =  0;
+	int max = 11, min = 0;
+	int valor = 1 + rand()/(RAND_MAX/(max-min+1)+1);
+	printf("BLACK JACK");
+	carta1[valor];
+	printf("Carta 1 : %d", carta[valor]);
+	
+	
+}
