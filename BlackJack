@@ -4,24 +4,43 @@
 
 int main(){
 	
-	srand(time(NULL));
-	int  carta[51], total =  0;
-	int max = 51, min = 0;
-	int valor = min + rand()/(RAND_MAX/(max-min+1)+1);
-	printf("BLACK  % d", valor);
+	
+	int  carta[51], total =  0, posc = 1;
 
-	
 		for(int cont2 = 0; cont2 < 51; cont2 ++){
-			carta[cont2] = cont2;
-			printf("%d\n", carta[cont2]);
-		}
-        //LLENAR EL VECTOR
-		
-printf("Tus cartas son %d y %d", carta[valor],carta[valor]); 
 			
-	}	
+		
+			if(cont2 % 4 == 0){
+				posc++;
+				carta[cont2] = posc;
+				if(posc>10){
+					switch(posc){
+						case 11
+							posc = 'J';
+						case 12
+							posc=  'Q';
+						case 13
+							posc = 'K';
+						case 14
+							posc = 'A';
+					}
+				}
+			}else{
+				carta[cont2] = posc;
+			}
+			}
+
+			
+			printf("%d\n", carta[cont2]);
+				
+		}	
 	
+	srand(time(NULL));
+	int maxx = 52;
+	int minn = 1;
+	int valor = minn + rand()/(RAND_MAX/(maxx-minn+1)+1);
+	printf("%d", valor);
 	
-	
-	
-}
+	printf("Tus cartas son %d y %d", carta[valor],carta[valor]); 
+			
+	}
